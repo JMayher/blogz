@@ -8,7 +8,7 @@ app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+pymysql://build-a-blog:buildablog
 app.config['SQLALCHEMY_ECHO'] = True 
 db = SQLAlchemy(app)
 
-class Task(db.Model):
+class Blog(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     entry = db.Column(db.String(60))
     body = db.Column(db.String(500))
