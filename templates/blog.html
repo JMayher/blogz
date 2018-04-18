@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1>Build a Blog!</h1>
+
+    {% for blog in blogs %}
+    <form >
+    <h2><a href="blog?id={{blog.id}}">{{blog.entry}}</a></h2>
+    <p>{{blog.body}}</p>
+    <input type="hidden" name="blog_id" value={{blog.id}}>
+    </form>
+        <hr />
+        
+    {% endfor %}
+ 
+    
+{% endblock %}
+
+</html>
