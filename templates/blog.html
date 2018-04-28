@@ -7,11 +7,19 @@
     <form >
     <h2><a href="blog?id={{blog.id}}">{{blog.entry}}</a></h2>
     <p>{{blog.body}}</p>
-    <input type="hidden" name="blog_id" value={{blog.id}}>
+    <p>written by <a href = "blog?user={{blog.owner.id}}">{{blog.owner.username}}</a></p>
+        
+    <input type="hidden" name="blog_id" v"alue={{blog.id}}>
     </form>
+
+    
         <hr />
         
     {% endfor %}
+
+  
+
+
  
     
 {% endblock %}
